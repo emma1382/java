@@ -1,0 +1,134 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package jav1.woch2;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author ssonntag
+ */
+public class Dien_2_2 {
+
+    /*summe, Durchschnitt, min und max
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner eingabe = new Scanner(System.in);
+        int[] ich = {91, 25, 48, 68, 79, 12, 35, 24, 68, 94, 61, 16, 4};
+        int laenge = ich.length;
+        int summe = 0;
+        int i = 0;
+        int max = ich[i];
+        int min = ich[i];
+        int durchschnitt = 0;
+        // int i = 0;
+
+        while (i < laenge) {
+            if (ich[i] > max) {
+                max = ich[i];
+                i++;
+            } else if (ich[i] < min) {
+                min = ich[i];
+                i++;
+            }
+            summe=summe+ich[i];     
+            System.out.println("Array-Länge ist " + laenge);
+            
+
+            while (i < laenge) {
+                summe = summe + ich[i];
+                i++;
+            }
+           durchschnitt = summe / laenge;
+           
+            System.out.println("Summe: "+summe);
+            System.out.println("Durchschnitt: "+durchschnitt);
+            System.out.println("Die Max " + max);
+            System.out.println("Die Min  " + min);
+
+            /*if (ich[i] > max) {
+            max = ich[i];
+            i++;
+        } else if (ich[i] < min) {
+            min = ich[i];
+            i++;
+        }*/
+        }
+
+    }
+}
+//fehler wo?<
+
+
+
+
+// ohne fehler
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package jav1.woch2;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author ssonntag
+ */
+public class Dien_2_2 {
+
+    /*summe, Durchschnitt, min und max
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner eingabe = new Scanner(System.in);
+        int[] ich = {91, 25, 48, 68, 79, 12, 35, 24, 68, 94, 61, 16, 4};
+        int laenge = ich.length;
+        int summe = 0;
+        int i = 0;
+        int max = ich[i];
+        int min = ich[i];
+        int durchschnitt = 0;
+        // int i = 0;
+
+        while (i < laenge) {
+            if (ich[i] > max) {
+                max = ich[i];
+                
+            } else if (ich[i] < min) {
+                min = ich[i];
+                
+            }
+            summe=summe+ich[i];
+            i++;
+        } 
+            System.out.println("Array-Länge ist " + laenge);
+            
+
+            while (i < laenge) {
+                summe = summe + ich[i];
+                i++;
+            }
+            
+           durchschnitt = summe / laenge;
+           
+            System.out.println("Summe: "+summe);
+            System.out.println("Durchschnitt: "+durchschnitt);
+            System.out.println("Die Max " + max);
+            System.out.println("Die Min  " + min);
+
+            /*if (ich[i] > max) {
+            max = ich[i];
+            i++;
+        } else if (ich[i] < min) {
+            min = ich[i];
+            i++;
+        }*/
+        }
+
+    }

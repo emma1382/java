@@ -1,0 +1,45 @@
+package jav1;
+
+import java.util.Scanner;
+
+public class Array_2 {
+
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner eingabe=new Scanner(System.in);
+                
+                
+        int[] tarry2 = new int[5];     //array zählen immer bei 0,1,2,3  
+        int laenge = tarry2.length;    // arrayläge
+        System.out.println("Länge " + laenge);
+
+        /*for(int i=0;i<laenge;i++){
+           System.out.print(tarry2[i]+"|");
+         */
+        //oder while
+        int zahl=2;
+        int i = 0;
+        while (i < laenge) {
+            tarry2[i] = zahl;
+            zahl=zahl*2;
+            i++;
+        }
+        System.out.println("i: " +i);
+        i = 0; //hier setze ich i wieder auf =(null)
+        
+        while (i < laenge) {
+            System.out.print(tarry2[i] + "|");
+            i++;
+            
+            // hier könnte man den Thaerd schlafen lassen für einige sec
+            //Thread.sleep(1000);
+        }
+        System.out.println("");
+        System.out.println("welche Indexposition");
+        int position=eingabe.nextInt();
+        System.out.println("die zahl an position"+ position +" ist " +tarry2[position]);
+
+        System.out.println("");
+    }
+
+}

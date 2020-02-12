@@ -1,0 +1,50 @@
+package jav1;
+
+public class ArraySort {
+
+    public static void main(String[] args) {
+        int[] zahlen = {7, 4, 12, 29, 17, 12};
+        int k = zahlen.length;
+        System.out.println("Länge von zahlen " + zahlen.length);
+        int tausch = 1, i = 0, merk = 0;
+        int j = 0;
+        while (k > 0 && tausch == 1) {
+            i = 0;
+            tausch = 0;
+            while (i < k - 1) {
+                System.out.println("Vergleiche ob " + zahlen[i] + " größer als " + zahlen[i + 1]);
+                if (zahlen[i] > zahlen[i + 1]) {
+                    System.out.println("Tausch erforderlich");
+                    System.out.println(zahlen[i] + " ist größer als " + zahlen[i + 1]);
+                    merk = zahlen[i];
+                    System.out.println("Merke mir " + merk);
+                    zahlen[i] = zahlen[i + 1];
+                    System.out.println("Habe nun " + zahlen[i + 1] + " nach Index " + i + " geschrieben");
+                    zahlen[i + 1] = merk;
+                    System.out.println("Habe nun Index " + (i + 1) + " mit " + merk + " gefüllt");
+                    tausch = 1;
+                    System.out.println("tausch ist nun 1, daher weiß ich, es wurde ein Tausch vorgenommen");
+                    System.out.println("So sieht das sortierte Array nun aus:");
+                    j = 0;
+                    System.out.println("********************************");
+                    while (j < zahlen.length) {
+                        System.out.print(zahlen[j] + " ");
+                        j++;
+                    }
+                    System.out.println("");
+                    System.out.println("********************************");
+                } else {
+                    System.out.println("Tausch NICHT erforderlich");
+                }
+                i++;
+            }
+            if (k == zahlen.length) {
+                System.out.println("Die größte Zahl ist nun an der Stelle " + k + " die muss ich nicht mehr ansehen, also verkürze ich k um 1");
+            }
+            if (k == zahlen.length - 1) {
+                System.out.println("Die nächstgrößte Zahl ist nun an der Stelle " + k + " die muss ich nicht mehr ansehen, also verkürze ich k um 1");
+            }
+            k = k - 1;
+        }
+    }
+}
